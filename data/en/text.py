@@ -1,4 +1,4 @@
-STR_GAME_TITLE = "In the name of the Five Cats"
+STR_GAME_TITLE = "RPG game of math"
 
 # Start scene
 STR_NEW_GAME = "New game"

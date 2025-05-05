@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="152">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="152">
  <editorsettings>
   <export format="tmx"/>
  </editorsettings>
@@ -22,15 +22,15 @@
  <layer id="2" name="obstacles" width="16" height="10">
   <data encoding="csv">
 1,850,1,1,1,1,1,851,6116,1,1,848,6129,6093,6095,6131,
-848,1,854,1,848,1,852,1,1,850,1,1,1,1,1,853,
-1,1,1,1,1,850,1,848,1,1,848,1,1,1,851,854,
-1,1,1,1,1,1,1,1,1,1,1,1,1,848,1,6081,
-854,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6087,
-847,852,1,1,1,1,1,1,1,1,1,1,1,1,1,6093,
-848,1,1,854,1,1,1,1,1,1,1,1,1,1,1,849,
-1,852,1,1,1,848,1,848,1,1,1,1,1,1,1,848,
-1,854,848,1,848,1,848,1,852,1,854,1,1,1,1,850,
-1,1,1,854,1,852,1,854,852,854,1,6081,6082,6083,848,1
+848,1,854,1,848,1,852,1,1,850,1,1,1,1,1,589,
+1,1,1,1,1,850,1,848,1,1,848,1,1,1,589,589,
+1,1,1,1,1,1,1,1,1,1,1,1,1,589,1,589,
+589,1,1,1,1,1,1,1,1,1,1,1,1,1,1,589,
+847,589,1,1,1,1,1,1,1,1,1,1,1,1,1,589,
+589,1,1,589,1,1,1,1,1,1,1,1,1,1,1,589,
+1,589,1,1,1,1,1,1,1,1,1,1,1,1,1,589,
+1,589,589,1,1,1,589,1,589,1,589,1,1,1,1,589,
+1,1,1,589,1,589,1,589,589,589,1,6081,6082,6083,848,1
 </data>
  </layer>
  <objectgroup id="5" name="dynamic_data">
@@ -81,10 +81,7 @@
     <property name="level" type="int" value="1"/>
    </properties>
   </object>
-  <object id="125" name="placement" type="placement" x="384" y="224" width="32" height="32"/>
   <object id="130" name="placement" type="placement" x="384" y="256" width="32" height="32"/>
-  <object id="131" name="placement" type="placement" x="416" y="256" width="32" height="32"/>
-  <object id="126" name="placement" type="placement" x="416" y="224" width="32" height="32"/>
   <object id="128" x="384" y="256" width="32"/>
   <object id="132" type="chest" gid="8" x="224" y="64" width="32" height="32">
    <properties>
@@ -95,7 +92,7 @@
     <property name="opened_sprite" value="imgs/dungeon_crawl/dungeon/chest_2_open.png"/>
    </properties>
   </object>
-  <object id="140" name="jist" type="ally" x="384" y="192" width="32" height="32"/>
+  <object id="140" name="jist" type="ally" x="98.8144" y="224.017" width="32" height="32"/>
   <object id="143" name="house" type="building" gid="6111" x="128" y="192" width="32" height="32">
    <properties>
     <property name="gold" type="int" value="500"/>
@@ -121,7 +118,7 @@
     <property name="sprite_link" value="imgs/houses/red_house.png"/>
    </properties>
   </object>
-  <object id="147" name="tavern" type="building" gid="6103" x="384" y="192" width="32" height="32">
+  <object id="147" name="tavern" type="building" gid="6103" x="384.593" y="257.812" width="32" height="32">
    <properties>
     <property name="sprite_link" value="imgs/houses/tavern.png"/>
    </properties>

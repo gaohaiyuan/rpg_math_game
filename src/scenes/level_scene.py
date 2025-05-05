@@ -397,13 +397,13 @@ class LevelScene(Scene):
         self.is_loaded = True
 
     def _determine_players_initial_position(self):
-        for player in self.players:
-            for tile in self.player_possible_placements:
-                if self.get_entity_on_tile(tile) is None:
-                    player.set_initial_pos(tile)
-                    break
-            else:
-                print(STR_ERROR_NOT_ENOUGH_TILES_TO_SET_PLAYERS)
+        player = self.players[0]
+        for tile in self.player_possible_placements:
+            if self.get_entity_on_tile(tile) is None:
+                player.set_initial_pos(tile)
+                break
+        else:
+            print(STR_ERROR_NOT_ENOUGH_TILES_TO_SET_PLAYERS)
 
     def open_save_menu(self) -> None:
         """
