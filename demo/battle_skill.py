@@ -4,7 +4,7 @@ import sys
 pygame.init()
 
 # Constants
-SCREEN_WIDTH = 800
+SCREEN_WIDTH = 900
 SCREEN_HEIGHT = 600
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -18,8 +18,9 @@ pygame.display.set_caption("Battle GUI with Skills")
 
 
 class Skill:
-    def __init__(self, name, damage, mp_cost):
+    def __init__(self, name, math_class, damage, mp_cost):
         self.name = name
+        self.math_class = math_class
         self.damage = damage
         self.mp_cost = mp_cost
 
@@ -37,16 +38,16 @@ class Character:
 # Initialize characters with different skills
 left_char = Character("Warrior", 50, 200)
 left_char.skills = [
-    Skill("Slash", 15, 0),
-    Skill("Heal", -20, 15),
-    Skill("Defend", 0, 5)
+    Skill("Arithmetic", "Algebra",5, 0),
+    Skill("Elementary geometry", "Geometry", 20, 5),
+    Skill("Calculus", "Analytics", 25, 10)
 ]
 
 right_char = Character("Mage", 600, 200)
 right_char.skills = [
-    Skill("Fireball", 25, 10),
-    Skill("Ice Nova", 20, 12),
-    Skill("Mana Shield", -10, 20)  # Heals MP
+    Skill("Number theory", "Algebra", 25, 10),
+    Skill("Analytic geometry", "Geometry", 30, 15),
+    Skill("Complex variables functions", "Analytics", 40, 20)
 ]
 
 current_turn = 'left'
@@ -70,8 +71,8 @@ def draw_text(text, x, y):
 
 def draw_skill_menu(char_skills, x, y):
     for idx, skill in enumerate(char_skills):
-        text = f"{idx + 1}. {skill.name} (MP:{skill.mp_cost})"
-        draw_text(text, x, y + idx * 30)
+        text = f"{idx + 1}. {skill.name} \n(Class:{skill.math_class}, Damage:{skill.damage}, MP:{skill.mp_cost})"
+        draw_text(text, x, y + idx * 60)
 
 
 def main():
